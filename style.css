@@ -53,7 +53,7 @@ nav a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #FFFFFF; /* white text on dark hero */
+  color: #FFFFFF;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
