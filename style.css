@@ -1,0 +1,93 @@
+/* Fonts & Base */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #111111;
+  background-color: #FAFAFA;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+  background: #FAFAFA;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #111111;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #C9A66B;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('../images/hero-image.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Portfolio Grid */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grid img {
+  width: 300px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  nav { flex-direction: column; gap: 15px; }
+  .grid img { width: 90%; }
+}
