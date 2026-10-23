@@ -4,3 +4,6 @@
 
 /* Improve contrast for the Education & Growth heading on the taupe section. */
 .education .section-heading h2{color:#fff}.education .section-heading h2 em{color:#fff;text-decoration:underline;text-decoration-color:var(--rose);text-decoration-thickness:3px;text-underline-offset:7px}.education .section-heading .eyebrow{color:#fff}
+
+/* Education section: high-contrast black text with soft pink small labels. */
+.education .section-heading h2,.education .section-heading h2 em{color:#222022;text-decoration:none}.education .section-heading .eyebrow,.education .education-card .eyebrow{color:#ecd8d4}.education .section-heading .section-note{color:#222022}.education .education-card p:not(.eyebrow),.education .education-card h3,.education .education-card .degree{color:#222022}.education .education-card .number,.education .education-card .date{color:#817468}.education .education-note{color:#222022}
