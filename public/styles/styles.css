@@ -13,3 +13,25 @@
 
 /* Education cards: consistent dark descriptive labels for readability. */
 .education .education-card .eyebrow{color:#514a46}.education .education-card p:not(.eyebrow),.education .education-card h3,.education .education-card .degree{color:#222022}.education .section-heading .section-note{color:#514a46}
+
+
+/* Creative-studio hybrid: a subtle signature interaction in the hero artwork. */
+.landscape{--pointer-x:0px;--pointer-y:0px;isolation:isolate}
+.landscape .sun{transform:translate(var(--pointer-x),var(--pointer-y));transition:transform .32s ease-out}
+.landscape .hill-back{transform:translate(calc(var(--pointer-x)*-.25),calc(var(--pointer-y)*-.2)) rotate(-7deg);transition:transform .45s ease-out}
+.landscape .hill-mid{transform:translate(calc(var(--pointer-x)*-.5),calc(var(--pointer-y)*-.35)) rotate(8deg);transition:transform .5s ease-out}
+.landscape .hill-front{transform:translate(calc(var(--pointer-x)*-.75),calc(var(--pointer-y)*-.5)) rotate(-3deg);transition:transform .55s ease-out}
+.landscape-orbit{position:absolute;z-index:1;left:66%;top:13%;width:clamp(94px,13vw,174px);aspect-ratio:1;border:1px solid #fffaf5a8;border-radius:50%;transform:translate(calc(var(--pointer-x)*.6),calc(var(--pointer-y)*.6));transition:transform .3s ease-out}
+.orbit-two{width:clamp(128px,17vw,220px);left:calc(66% - clamp(17px,2vw,28px));top:calc(13% - clamp(17px,2vw,28px));border-color:#81746885}
+.landscape-caption{position:absolute;z-index:3;left:max(32px,calc((100% - 1160px)/2));bottom:25px;color:#fffaf5;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-shadow:0 1px 8px #22202240}
+.project-carousel .project-image{position:relative}
+.project-carousel .project-image:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ecd8d420,transparent 55%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+.project-carousel .project:hover .project-image:after,.project-carousel .project:focus-visible .project-image:after{opacity:1}
+.project-category{position:relative}
+.project-category:before{content:"";display:block;width:34px;height:1px;background:var(--rose);margin-bottom:17px}
+.category-heading{margin-bottom:22px}
+.category-link{display:inline-flex;align-items:center;gap:8px}
+.will-reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.will-reveal.is-visible{opacity:1;transform:translateY(0)}
+@media(max-width:560px){.landscape-caption{left:20px;bottom:17px;font-size:.52rem}.landscape-orbit{left:62%}.orbit-two{left:calc(62% - 18px)}}
+@media(prefers-reduced-motion:reduce){.landscape .sun,.landscape .hill-back,.landscape .hill-mid,.landscape .hill-front,.landscape-orbit,.will-reveal,.project-carousel .project-image:after{transition:none!important;transform:none!important;animation:none!important}}
