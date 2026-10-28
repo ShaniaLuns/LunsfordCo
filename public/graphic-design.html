@@ -1,2 +1,78 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ecd8d4"><meta name="description" content="A selection of graphic design projects, including branding, campaigns, promotional materials, and digital graphics."><title>Mobile Fab Lab — Lunsford &amp; Co.</title><link rel="icon" href="/assets/panther.PNG" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles/styles.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><nav class="nav container" aria-label="Main navigation"><a class="brand" href="/index.html"><img src="/assets/panther.PNG" alt="" class="brand-mark"><span>Lunsford <i>&amp;</i> Co.</span></a><ul class="nav-links"><li><a href="/index.html#work">Work</a></li><li><a href="/index.html#about">About</a></li><li><a href="/index.html#education">Education</a></li><li><a href="/index.html#contact">Contact</a></li></ul></nav></header><main id="main"><section class="photo-page-hero"><div class="container"><p class="eyebrow">Selected work</p><h1>Mobile Fab Lab</h1><p class="photo-page-intro">A selection of graphic design projects, including branding, campaigns, promotional materials, and digital graphics.</p><a class="back-link" href="/index.html#work">← Back to selected work</a></div></section><section class="container collection-gallery" aria-label="Mobile Fab Lab portfolio"><figure><img src="/assets/TIUPoster.png" alt="TIU Mobile Fab Lab promotional poster" loading="lazy"><figcaption>TIU Mobile Fab Lab · Branding and outreach</figcaption></figure><div class="collection-note">Additional projects can be added here as the portfolio grows.</div></section></main><footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="/index.html">Lunsford <i>&amp;</i> Co.</a><p>Thoughtful design, made with purpose.</p><a href="#main" class="back-top">Back to top ↑</a><small>© <span id="year"></span> Lunsford &amp; Co. All rights reserved.</small></div></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ecd8d4">
+<meta name="description" content="Selected graphic design projects by Shania Lunsford, including Juniata College's Mountain Day 150th anniversary T-shirt and TIU Mobile Fab Lab outreach design.">
+<title>Graphic Design — Lunsford &amp; Co.</title>
+<link rel="icon" href="/assets/panther.PNG" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/styles.css">
+<style>
+.design-projects{padding-block:clamp(44px,7vw,86px) clamp(70px,9vw,120px)}
+.design-project{padding-block:clamp(34px,5vw,64px);border-bottom:1px solid var(--line)}
+.design-project:first-child{padding-top:0}
+.design-project:last-child{border-bottom:0}
+.design-project-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.7fr);gap:30px;align-items:end;margin-bottom:28px}
+.design-project h2{font:400 clamp(2.3rem,4.6vw,4rem)/1.08 var(--serif);letter-spacing:-.035em;margin:0}
+.design-project .project-description{max-width:520px;color:var(--muted);font-size:.9rem;margin:0}
+.project-kicker{margin:0 0 12px;color:#866e69;font-size:.65rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
+.mountain-gallery{display:grid;grid-template-columns:1fr 1fr;column-gap:10px;row-gap:4px;align-items:start}
+.mountain-gallery .people-photo{grid-column:1;grid-row:1}
+.mountain-gallery .design-closeup{grid-column:1;grid-row:2}
+.mountain-gallery .shirt-photo{grid-column:2;grid-row:1 / span 2;align-self:start}
+.mountain-gallery-2024 .people-photo{grid-column:1;grid-row:1}
+.mountain-gallery-2024 .shirt-photo{grid-column:2;grid-row:1}
+.mountain-gallery-2024 .design-closeup{grid-column:1;grid-row:2}
+.mountain-gallery-2024 .extra-photo{grid-column:2;grid-row:2}
+.mountain-gallery figure,.single-project-image{margin:0;min-width:0;background:#f3efeb;padding:8px}
+.mountain-gallery img,.single-project-image img{display:block;width:100%;height:auto;max-height:760px;object-fit:contain}
+.mountain-gallery figcaption,.single-project-image figcaption{padding:12px 3px 2px;color:var(--muted);font-size:.7rem;letter-spacing:.035em}
+.design-project-copy{max-width:760px;padding-top:26px}
+.design-project-copy p{color:var(--muted);font-size:.9rem}
+.project-impact{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+.project-impact div{min-width:125px}
+.project-impact strong{display:block;font:500 1.8rem/1.2 var(--serif);color:var(--ink)}
+.project-impact span{display:block;margin-top:4px;color:var(--muted);font-size:.65rem;letter-spacing:.09em;text-transform:uppercase}
+.tiu-image{max-width:760px}
+@media(max-width:680px){.design-project-heading{grid-template-columns:1fr;gap:14px}.mountain-gallery{grid-template-columns:1fr}.mountain-gallery-2024 .people-photo,.mountain-gallery-2024 .shirt-photo,.mountain-gallery-2024 .design-closeup,.mountain-gallery-2024 .extra-photo{grid-column:1;grid-row:auto}.mountain-gallery figure,.single-project-image{padding:12px}.project-impact{gap:18px}.project-impact div{min-width:100px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><nav class="nav container" aria-label="Main navigation">
+<a class="brand" href="/index.html"><img src="/assets/panther.PNG" alt="" class="brand-mark"><span>Lunsford <i>&amp;</i> Co.</span></a>
+<ul class="nav-links"><li><a href="/index.html#work">Work</a></li><li><a href="/index.html#about">About</a></li><li><a href="/index.html#education">Education</a></li><li><a href="/index.html#contact">Contact</a></li></ul>
+</nav></header>
+<main id="main">
+<section class="photo-page-hero"><div class="container"><p class="eyebrow">Selected work</p><h1>Graphic Design</h1><p class="photo-page-intro">Visual ideas shaped into thoughtful graphics, printed pieces, and community-centered design.</p><a class="back-link" href="/index.html#work">← Back to selected work</a></div></section>
+<section class="container design-projects" aria-label="Graphic design portfolio projects">
+<article class="design-project" aria-labelledby="mountain-day-title">
+<div class="design-project-heading"><div><p class="project-kicker">Juniata College · Commemorative design</p><h2 id="mountain-day-title">Mountain Day: 150 Years</h2></div><p class="project-description">A commemorative T-shirt graphic celebrating a milestone in Juniata College history and the traditions that bring its community together.</p></div>
+<div class="mountain-gallery">
+<figure class="people-photo"><img src="/assets/MountainDay1.jpg" alt="Original photograph of people holding the Juniata College Mountain Day commemorative T-shirt" loading="lazy"><figcaption>Mountain Day commemorative shirt · Original photograph</figcaption></figure>
+<figure class="shirt-photo"><img src="/assets/MountainDay2025.jpg" alt="Original photograph showing the Mountain Day 150th anniversary shirt" loading="lazy"><figcaption>Finished shirt · Original photograph</figcaption></figure>
+<figure class="design-closeup"><img src="/assets/MountainDay2025_DesignCloseup.png" alt="Close-up of the original illustrated Mountain Day 150th anniversary T-shirt design" loading="lazy"><figcaption>Design detail · Original close-up image</figcaption></figure>
+</div>
+<div class="design-project-copy"><p class="project-kicker">Concept · Illustration · Print preparation</p><p>Designed in Procreate, the graphic brings together an illustrated map and collage of campus traditions into one cohesive keepsake. I prepared the final artwork for print production, translating the digital illustration into a wearable design for this milestone celebration.</p>
+<div class="project-impact"><div><strong>200</strong><span>Shirts produced</span></div><div><strong>Under 1 hour</strong><span>Time to sell out</span></div><div><strong>Procreate</strong><span>Illustration tool</span></div></div></div>
+</article>
+<article class="design-project" aria-labelledby="mountain-day-2024-title">
+<div class="design-project-heading"><div><p class="project-kicker">Juniata College · Campus tradition</p><h2 id="mountain-day-2024-title">Mountain Day 2024</h2></div><p class="project-description">A commemorative T-shirt design created during the Fall 2024 semester for Juniata College’s annual Mountain Day celebration.</p></div>
+<div class="mountain-gallery mountain-gallery-2024">
+<figure class="people-photo"><img src="/assets/MountainDay2024_01.jpg" alt="Original photograph from the 2024 Mountain Day T-shirt project" loading="lazy"><figcaption>Mountain Day 2024 · Original photograph</figcaption></figure>
+<figure class="shirt-photo"><img src="/assets/MountainDay2024_02.jpg" alt="Original photograph showing the 2024 Mountain Day shirt" loading="lazy"><figcaption>Finished shirt · Original photograph</figcaption></figure>
+<figure class="design-closeup"><img src="/assets/mountainday2024_front.png" alt="Front view of the 2024 Mountain Day T-shirt design" loading="lazy"><figcaption>Design view · Original image</figcaption></figure>
+<figure class="extra-photo"><img src="/assets/1.jpg" alt="Additional original image from the Mountain Day 2024 project" loading="lazy"><figcaption>Project detail · Original photograph</figcaption></figure>
+</div>
+<div class="design-project-copy"><p class="project-kicker">Event design · T-shirt graphic</p><p>Created for an earlier year of Mountain Day, this design captures the character of the annual campus tradition through a distinct visual treatment. Presented alongside the 150th anniversary edition, it shows how the event’s visual expression can evolve from year to year.</p></div>
+</article>
+<article class="design-project" aria-labelledby="tiu-title">
+<div class="design-project-heading"><div><p class="project-kicker">TIU 11 · STEM outreach</p><h2 id="tiu-title">Mobile Fab Lab</h2></div><p class="project-description">Visual identity and promotional design supporting a mobile STEM outreach initiative.</p></div>
+<figure class="single-project-image tiu-image"><img src="/assets/TIUPoster.png" alt="Promotional poster for the TIU Mobile Fab Lab outreach project" loading="lazy"><figcaption>Mobile Fab Lab · Promotional design</figcaption></figure>
+</article>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="/index.html">Lunsford <i>&amp;</i> Co.</a><p>Thoughtful design, made with purpose.</p><a href="#main" class="back-top">Back to top ↑</a><small>© <span id="year"></span> Lunsford &amp; Co. All rights reserved.</small></div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body></html>
