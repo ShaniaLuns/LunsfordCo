@@ -35,3 +35,29 @@
 .will-reveal.is-visible{opacity:1;transform:translateY(0)}
 @media(max-width:560px){.landscape-caption{left:20px;bottom:17px;font-size:.52rem}.landscape-orbit{left:62%}.orbit-two{left:calc(62% - 18px)}}
 @media(prefers-reduced-motion:reduce){.landscape .sun,.landscape .hill-back,.landscape .hill-mid,.landscape .hill-front,.landscape-orbit,.will-reveal,.project-carousel .project-image:after{transition:none!important;transform:none!important;animation:none!important}}
+
+
+/* Cinematic, scroll-driven Lunsford & Co. logo reveal.
+   Original logo artwork remains unchanged; scroll progress animates presentation only. */
+.brand-reveal{--reveal-progress:0;position:relative;height:230vh;background:#0d0b0e;color:#fff9f6;isolation:isolate}
+.brand-reveal-sticky{position:sticky;top:0;height:100vh;min-height:570px;max-height:1000px;overflow:hidden;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 115%,#39202e 0%,#191217 39%,#0d0b0e 74%)}
+.brand-grid{position:absolute;inset:0;opacity:.13;background-image:linear-gradient(#f5dce50e 1px,transparent 1px),linear-gradient(90deg,#f5dce50e 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 0%,transparent 77%);pointer-events:none}
+.brand-glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(2px);opacity:calc(.14 + var(--reveal-progress)*.22);transition:opacity .2s}
+.brand-glow-one{width:min(65vw,690px);aspect-ratio:1;left:calc(50% - min(32.5vw,345px));top:calc(50% - min(32.5vw,345px));background:radial-gradient(circle,#bd718c33 0%,#8c426522 34%,transparent 70%);transform:translate3d(calc((var(--reveal-progress) - .5)*-30px),calc(var(--reveal-progress)*-16px),0)}
+.brand-glow-two{width:min(38vw,400px);aspect-ratio:1;left:calc(50% - min(19vw,200px));top:calc(50% - min(19vw,200px));background:radial-gradient(circle,#f0c8d51c 0%,transparent 68%);transform:scale(calc(.72 + var(--reveal-progress)*.4))}
+.brand-reveal-content{position:relative;z-index:2;width:min(100% - 40px,1040px);display:flex;flex-direction:column;align-items:center;text-align:center;transform:translateY(calc((1 - var(--reveal-progress))*28px));}
+.brand-kicker{margin:0 0 clamp(30px,7vh,72px);color:#d3a5b4;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;opacity:calc(.35 + var(--reveal-progress)*.65);transform:translateY(calc((1 - var(--reveal-progress))*12px))}
+.brand-lockup{display:flex;align-items:center;justify-content:center;gap:clamp(20px,4vw,56px);width:100%;transform:scale(calc(.72 + var(--reveal-progress)*.28));transform-origin:center;will-change:transform}
+.brand-panther{width:clamp(84px,15vw,178px);height:clamp(84px,15vw,178px);object-fit:contain;filter:drop-shadow(0 10px 32px #db8eaa24);opacity:calc(.42 + var(--reveal-progress)*.58);transform:translateX(calc((1 - var(--reveal-progress))*-44px));}
+.brand-divider{display:block;width:1px;height:clamp(72px,10vw,120px);background:linear-gradient(transparent,#d8a7b8 20%,#d8a7b8 80%,transparent);transform:scaleY(var(--reveal-progress));transform-origin:center}
+.brand-wordmark{margin:0;color:#fff8f5;font:400 clamp(2.7rem,8vw,7rem)/.95 var(--serif);letter-spacing:-.055em;white-space:nowrap;opacity:calc(.3 + var(--reveal-progress)*.7);transform:translateX(calc((1 - var(--reveal-progress))*44px));text-shadow:0 8px 45px #d58aa51c}
+.brand-wordmark i{font-style:italic;color:#d69aaf}
+.brand-tagline{margin:clamp(30px,6vh,58px) 0 0;color:#f8e9ed;font:400 clamp(1.35rem,3vw,2.5rem)/1.25 var(--serif);letter-spacing:-.015em;opacity:calc(.08 + var(--reveal-progress)*.92);transform:translateY(calc((1 - var(--reveal-progress))*24px));}
+.brand-tagline em{color:#d49aaf;font-weight:400}
+.brand-scroll-cue{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:clamp(28px,7vh,66px);color:#a99aa2;font-size:.55rem;letter-spacing:.22em;opacity:calc(1 - var(--reveal-progress)*1.4);transition:opacity .2s}
+.brand-scroll-cue span{display:block;width:1px;height:35px;background:linear-gradient(#d49aaf,transparent);transform:scaleY(calc(1 - var(--reveal-progress)*.6));transform-origin:top}
+.brand-index{position:absolute;z-index:3;left:clamp(20px,4vw,58px);bottom:clamp(18px,4vh,38px);margin:0;color:#8b7a83;font-size:.57rem;letter-spacing:.18em}
+.brand-index span{color:#d49aaf;margin:0 8px}
+.brand-reveal.is-complete .brand-scroll-cue{opacity:0}
+@media(max-width:600px){.brand-reveal{height:190vh}.brand-reveal-sticky{min-height:540px}.brand-reveal-content{width:calc(100% - 28px)}.brand-lockup{gap:15px}.brand-panther{width:72px;height:72px}.brand-wordmark{font-size:clamp(2.3rem,9vw,3.4rem)}.brand-divider{height:58px}.brand-kicker{font-size:.52rem;letter-spacing:.16em;margin-bottom:44px}.brand-tagline{margin-top:38px}.brand-grid{background-size:44px 44px}}
+@media(prefers-reduced-motion:reduce){.brand-reveal{height:auto;min-height:100vh}.brand-reveal-sticky{position:relative}.brand-reveal-content,.brand-panther,.brand-wordmark,.brand-tagline,.brand-divider,.brand-glow{transform:none!important;opacity:1!important;transition:none!important}.brand-scroll-cue{display:none}}
